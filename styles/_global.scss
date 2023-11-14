@@ -1,0 +1,24 @@
+header{
+
+    .nav{
+        
+        @include flex($justify: flex-start);
+        position: fixed;
+        width: 100%;
+        padding: 1rem 1rem;
+        z-index: 4;
+        transition: all 0.4s ease;
+        
+
+        @include tablet {
+            
+          }
+      
+          @include mobile {
+            position: absolute;
+            padding: 1rem 1rem;
+            font-size: 0.5rem;
+          }
+    }
+
+}

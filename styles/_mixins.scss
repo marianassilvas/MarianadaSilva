@@ -1,0 +1,25 @@
+@mixin flex($direction: row, $align: center, $justify: initial) {
+    display: flex;
+    align-items: $align;
+  
+    @if $direction !=row {
+      flex-direction: $direction;
+    }
+  
+    @if $justify !=initial {
+      justify-content: $justify;
+    }
+  }
+  
+  @mixin font($style: normal, $weight: normal, $size: $text, $line: 150%, $family: $sequelsans) {
+    font: $style $weight $line $family;
+    font-size: $size;
+    line-height: $line;
+  }
+  
+  @mixin size($width, $height, $maxWidth: initial, $maxHeight: initial) {
+    width: $width;
+    height: $height;
+    max-width: $maxWidth;
+    max-height: $maxHeight;
+  }

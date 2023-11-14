@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "SequelSans";
+  src: url("assets/fonts/SequelSans-LightDisp.ttf.ttf") format("truetype");
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 1rem;
+  z-index: 4;
+  transition: all 0.4s ease;
+}
+@media only screen and (max-width: 500px) {
+  header .nav {
+    position: absolute;
+    padding: 1rem 1rem;
+    font-size: 0.5rem;
+  }
+}
+
+html,
+body {
+  font: normal normal 150% "SequelSans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%;
+  min-height: 100%;
+  font-size: 10px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  cursor: none;
+  background-color: black;
+  color: #FFFAE5;
+}
+html h1,
+body h1 {
+  font: normal normal 100% "SequelSans", sans-serif;
+  font-size: 6.4rem;
+  line-height: 100%;
+}
+html h2,
+body h2 {
+  font: normal normal 150% "SequelSans", sans-serif;
+  font-size: 3.2rem;
+  line-height: 150%;
+}
+html h3,
+body h3 {
+  font: normal normal 150% "SequelSans", sans-serif;
+  font-size: 2.4rem;
+  line-height: 150%;
+}
+html p,
+body p {
+  font: normal normal 150% "SequelSans", sans-serif;
+  font-size: 2.4rem;
+  line-height: 150%;
+}
+html p,
+html a,
+html li,
+html button,
+body p,
+body a,
+body li,
+body button {
+  font-size: 1.6rem;
+}
+html a,
+html button,
+body a,
+body button {
+  font: normal normal 150% "SequelSans", sans-serif;
+  font-size: 2.4rem;
+  line-height: 150%;
+  text-decoration: none;
+  border: none;
+  cursor: none;
+}
+html a:focus, html a:active, html a:visited, html a:link, html a:hover,
+body a:focus,
+body a:active,
+body a:visited,
+body a:link,
+body a:hover {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+html ul,
+body ul {
+  list-style: none;
+}
+html img,
+body img {
+  max-width: 100%;
+  display: block;
+}
+html *,
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.theBall,
+.theBall-outer {
+  mix-blend-mode: exclusion;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+@media only screen and (max-width: 500px) {
+  .theBall,
+  .theBall-outer {
+    display: none;
+  }
+}
+
+.theBall-outer {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 5000;
+  pointer-events: none !important;
+}
+
+.theBall {
+  position: absolute;
+  background-color: #FFFAE5;
+  border-radius: 50%;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center center;
+}
+
+.dark_page .theBall,
+.coloring .theBall {
+  background-color: #000000;
+}
+
+.zooming.theBall {
+  transform: scale(2);
+}
+
+::-moz-selection {
+  background-color: #000000;
+  color: #FFFAE5;
+}
+
+::selection {
+  background-color: #000000;
+  color: #FFFAE5;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,126 @@
+@import './fonts';
+@import './variables';
+@import './_mixins';
+@import './_resposive';
+@import './_global';
+
+html,
+body {
+  @include font();
+  min-height: 100%;
+  font-size: 10px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  cursor: none;
+  background-color: black;
+  color: $white;
+
+  h1 {
+    @include font ($size: $heading, $line: 100%, $family: $sequelsans);
+  }
+
+  h2 {
+    @include font ($size: $title, $family: $sequelsans);
+  }
+
+  h3 {
+    @include font ($size: $subtitle, $family: $sequelsans);
+  }
+
+  p {
+    @include font ($size: $subtitle, $family: $sequelsans);
+  }
+
+  p,
+  a,
+  li,
+  button {
+    font-size: $text;
+  }
+
+  a,
+  button {
+    @include font ($size: $subtitle, $family: $sequelsans);
+    text-decoration: none;
+    border: none;
+    cursor: none;
+  }
+
+  a {
+
+    &:focus,
+    &:active,
+    &:visited,
+    &:link,
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.theBall,
+.theBall-outer {
+  mix-blend-mode: exclusion;
+
+  width: 3.2rem;
+  height: 3.2rem;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.theBall-outer {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 5000;
+  pointer-events: none !important;
+}
+
+.theBall {
+  position: absolute;
+  background-color: $white;
+  border-radius: 50%;
+  -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
+  -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
+  -ms-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
+  -o-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
+  transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
+  transform-origin: center center;
+}
+
+.dark_page .theBall,
+.coloring .theBall {
+  background-color: $black;
+}
+
+.zooming.theBall {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+}
+
+::selection {
+  background-color: $black;
+  color: $white;
+}
