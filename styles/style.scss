@@ -40,7 +40,7 @@ body {
 
   a,
   button {
-    @include font ($size: $subtitle, $family: $sequelsans);
+    @include font ($size: $text, $family: $sequelsans);
     text-decoration: none;
     border: none;
     cursor: none;
