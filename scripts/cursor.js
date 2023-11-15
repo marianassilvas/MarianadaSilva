@@ -16,3 +16,33 @@ $(function() {
       $(".theBall").removeClass("zooming")
     });
   })
+
+
+  let scroll;
+
+function initLocomotiveScroll() {
+    if (scroll) {
+        scroll.destroy(); // Destroy the existing instance
+    }
+
+    scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        mobile: {
+            smooth: true,
+            breakpoint: 0
+        },
+        tablet: {
+            smooth: true,
+            breakpoint: 0
+        }
+    });
+
+    new ResizeObserver(() => scroll.update()).observe(
+        document.querySelector("[data-scroll-container]")
+    );
+}
+
+window.addEventListener("load", (event) => {
+    initLocomotiveScroll();
+});
