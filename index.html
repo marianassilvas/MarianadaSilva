@@ -11,8 +11,10 @@
 
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script src="./scripts/locomotive-scroll.min.js"></script>
     <script src="./scripts/cursor.js"></script>
-    <script src="js/locomotive-scroll.min.js"></script>
+    
     
     <title>Mariana da Silva</title>
 
@@ -20,10 +22,16 @@
 
 
 <body>
+    <script>
+        (function () {
+            const locomotiveScroll = new LocomotiveScroll();
+            
+        })();
+    </script>
 <header>
     <nav class="nav">
         <a href="index.html" id="logo">
-         <p>MARIANA DA SILVA</p>
+         <p >MARIANA DA SILVA</p>
         </a>
         <ul>
             <li>
@@ -40,18 +48,19 @@
 </header>
 
 <main>
-<div id="presentation">
+
+<div  has-scroll-smooth id="presentation">
    <div id="salut">
-    <h1 id="HELLO">HELLO, I’M</h1><br>
-    <h1 id="MARIANA">MARIANA</h1><br>
-    <h1 id="SILVA">DA SILVA</h1><br>
+    <h1 data-scroll id="HELLO">HELLO, I’M</h1><br>
+    <h1 data-scroll id="MARIANA">MARIANA</h1><br>
+    <h1 data-scroll id="SILVA">DA SILVA</h1><br>
    </div>
 </div>
 
-<div id="about">
-<h1> ABOUT</h1>
-<section>
-<p>I enjoy creating meaningful experiences through design and technology. I'm interested in exploring new opportunities to apply my skills, contribute to innovative projects and look for new methods to express my creativity. </br>
+<div  id="about">
+<h1 data-scroll data-scroll-speed="0.5"> ABOUT</h1>
+<section data-scroll-section>
+<p data-scroll data-scroll-speed="0.8"> Hello there, I'm Mariana da Silva, a multidisplinary designer. I have a Master's and a Bachelor's degree in Design and Multimedia from the University of Coimbra. I enjoy creating meaningful experiences through design and technology. I'm interested in exploring new opportunities to apply my skills, contribute to innovative projects and look for new methods to express my creativity. </br>
 
     In my free time, you can find me playing chess or walking around while listening to podcasts.</p>
 </section>
