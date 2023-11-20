@@ -1,3 +1,5 @@
+
+
 function ball(name) {
     // DOM Object
     this.name= name;
@@ -105,30 +107,45 @@ function ball(name) {
     } 
   }
   
-  // Balls
-  var alta= new ball("a");
-  var baixa= new ball("b");
-  var balls= [ alta, baixa ];
   
-  // Random speed
-  function randomSpeed(i) {
-    balls[i].speed.x= 1000*(Math.random()-0.5);
-    balls[i].speed.y= 1000*(Math.random()-0.5);
-  }
   
-  // Initial speed
-  for (var i= 0; i < balls.length; i++) {
-    randomSpeed(i);
-  }
-  
-  // Play
-  window.setInterval(function(){
-    randomSpeed(Math.floor(3*Math.random()));
-  }, 2000);
-  
-  // Paint
-  window.setInterval(function(){
-    alta.paint();
-    baixa.paint();
-  }, 10);
-  
+  /*import LocomotiveScroll from 'locomotive-scroll';
+
+
+
+ let scroll;
+
+function initLocomotiveScroll() {
+    if (scroll) {
+        //scroll.destroy(); // Destroy the existing instance
+    }
+
+    scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        mobile: {
+            smooth: true,
+            breakpoint: 0
+        },
+        tablet: {
+            smooth: true,
+            breakpoint: 0
+        }
+    });
+
+    new ResizeObserver(() => scroll.update()).observe(
+        document.querySelector("[data-scroll-container]")
+    );
+}
+
+window.addEventListener("load", (event) => {
+    initLocomotiveScroll();
+});
+ */
+
+import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll";
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true
+});

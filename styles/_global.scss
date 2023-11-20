@@ -112,7 +112,7 @@ header{
 }
 
 main{
-    
+ 
 #presentation{
     @include flex($justify: space-between);
     width: 100vw;
@@ -123,6 +123,7 @@ main{
     #salut{
         padding-left: 40vw;
         line-height: 0.1rem;
+    
 
         @include tablet {
             padding-left: 20vw;
@@ -187,4 +188,8 @@ html.has-scroll-smooth {
     top: 0;
     bottom: 0;
 }
+
+
+
+
   
